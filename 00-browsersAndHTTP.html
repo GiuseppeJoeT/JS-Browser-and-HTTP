@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browsers and HTTP</title>
+</head>
+<body>
+    <h1>Browsers and HTTP</h1>
+    <h2>Basic Form</h2>
+    <form method="GET" action="example/message.html">
+        <p>Name: <input type="text" name="name"></p>
+        <p>Message: <br><textarea name="message"></textarea></p>
+        <p><button type="submit">Send</button></p>
+    </form>
+    <h2>Fetch</h2>
+    <p>The interface through which browser JavaScript can make 
+    HTTP requests is called <b>fetch</b>. Since it is relatively new, it conveniently uses promises (which is rare for browser interfaces).</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API - MDN</a>
+ <script>
+ // FETCH 
+fetch("example/data.txt").then(response => {
+    console.log(response.status);
+    // 200
+    console.log(response.headers.get("Content-Type"));
+})
+ </script>
+
+
+    
+</body>
+</html>
