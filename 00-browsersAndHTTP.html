@@ -24,6 +24,11 @@ fetch("example/data.txt").then(response => {
     console.log(response.status);
     // 200
     console.log(response.headers.get("Content-Type"));
+    console.log(" ");
+fetch("example/data.txt")
+    .then(resp => resp.text())
+    .then(text => console.log(text));
+    // This is the content of data.txt
 })
  </script>
 
